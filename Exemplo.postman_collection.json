@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "f42ae0dd-e58e-4d9c-9a64-1d7344b96abf",
+		"name": "Testando Implementação",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18153063"
+	},
+	"item": [
+		{
+			"name": "Incluir uma despesa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nome\": \"Legítima\",\r\n        \"pagamento\": \"Crédito Nubank\",\r\n        \"tipo\": \"Bazar\",\r\n        \"local\": \"A legítima super 10\",\r\n        \"gastoDia\": \"2022-07-08T20:39:56.8166667\",\r\n        \"valor\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33485/Add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33485",
+					"path": [
+						"Add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Receber todas as despesas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:33485/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33485",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Receber total de gastos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33485/total/Saída",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33485",
+					"path": [
+						"total",
+						"Saída"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar uma despesa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nome\": \"Bis Xtra\",\r\n        \"pagamento\": \"Pix\",\r\n        \"tipo\": \"Sobremesa\",\r\n        \"local\": \"Lincon\",\r\n        \"gastoDia\": \"2022-07-11T11:39:56.8166667\",\r\n        \"valor\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33485/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33485",
+					"path": [
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir uma despesa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:33485/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "33485",
+					"path": [
+						"19"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
